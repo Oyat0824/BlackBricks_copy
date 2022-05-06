@@ -1,0 +1,108 @@
+/* 노멀라이징 */
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+	color: inherit;
+	text-decoration: none;
+}
+
+a > img {
+    vertical-align: top;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+/* 라이브러리 */
+
+/*************** 스타일 ***************/
+body {
+    background-color: #000;
+}
+
+.scroll {
+    width: 100px;
+    height: 3000px;
+}
+
+/*** 헤더 시작 ***/
+header {
+    height: 100px;
+}
+
+header > .top-wrap.pc-ver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: inherit;
+    padding: 0 3%;
+    background-color: transparent;
+}
+
+header > .top-wrap.pc-ver.top::before {
+    height: 0;
+}
+
+header > .top-wrap.pc-ver::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    display: block;
+    content: "";
+
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+header > .top-wrap.pc-ver > .logo > a {
+    width: 165px;
+    height: 55px;
+    background: url(../img/header/logo.png) center / cover no-repeat;
+}
+
+header > .top-wrap.pc-ver.top > .logo > a {
+    background: url(../img/header/logo_w.png) center / cover no-repeat;
+}
+
+header > .top-wrap.pc-ver.top > .menu {
+    color: #fff;
+}
+
+header > .top-wrap.pc-ver > .menu {
+    color: #000;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+
+header > .top-wrap.pc-ver > .menu > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > .top-wrap.pc-ver > .menu > ul > li {
+
+}
+
+header > .top-wrap.pc-ver > .menu > ul > li + li {
+    margin-left: 60px;
+}
